@@ -1,0 +1,7 @@
+C:\Users\alann\source\repos\Learning C#\ServerStatusChecker\ServerStatusChecker\bin\Debug\ServerStatusChecker.exe.config
+C:\Users\alann\source\repos\Learning C#\ServerStatusChecker\ServerStatusChecker\bin\Debug\ServerStatusChecker.exe
+C:\Users\alann\source\repos\Learning C#\ServerStatusChecker\ServerStatusChecker\bin\Debug\ServerStatusChecker.pdb
+C:\Users\alann\source\repos\Learning C#\ServerStatusChecker\ServerStatusChecker\obj\Debug\MachineAnalyser.csprojAssemblyReference.cache
+C:\Users\alann\source\repos\Learning C#\ServerStatusChecker\ServerStatusChecker\obj\Debug\MachineAnalyser.csproj.CoreCompileInputs.cache
+C:\Users\alann\source\repos\Learning C#\ServerStatusChecker\ServerStatusChecker\obj\Debug\ServerStatusChecker.exe
+C:\Users\alann\source\repos\Learning C#\ServerStatusChecker\ServerStatusChecker\obj\Debug\ServerStatusChecker.pdb
