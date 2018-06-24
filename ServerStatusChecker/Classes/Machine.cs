@@ -14,41 +14,30 @@ namespace MachineAnalyzer.Classes
         public string Host { get; set; }
 
         // Says if the machine is online/offline
-        public bool IsAvailable(int timeout)
+        public PingReply IsAvailable(int timeout)
         {
-            try
+            Ping ping = new Ping();
+            PingOptions options = new PingOptions(64, true);
+
+            // Data in 32 bytes to be sent
+            string data = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            // Save the data as bytes(32)
+            byte[] buffer = Encoding.ASCII.GetBytes(data);
+            // Pings the host
+            // 
+            // Parameters
+            // timeout Maximo time of response
+            // buffer Data to be sent to machine host
+            PingReply reply = ping.Send(this.Host, timeout, buffer);
+
+            if (reply.Status.ToString() == "Success")
             {
-                Ping ping = new Ping();
-                PingOptions options = new PingOptions(64, true);
-
-                // Data in 32 bytes to be sent
-                string data = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-                // Save the data as bytes(32)
-                byte[] buffer = Encoding.ASCII.GetBytes(data);
-                // Pings the host
-                // 
-                // Parameters
-                // timeout Maximo time of response
-                // buffer Data to be sent to machine host
-                PingReply reply = ping.Send(this.Host, timeout, buffer);
-
-                if (reply.Status.ToString() == "Success")
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return reply;
             }
-
-            // Something with the host name is wrong, return false
-            // Or the host doesn't accept pings, it can happens
-            catch
+            else
             {
-                return false;
+                return reply;
             }
-            
         }
     }
 }
